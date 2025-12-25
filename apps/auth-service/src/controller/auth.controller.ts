@@ -3,6 +3,7 @@ import { Request, Response, NextFunction } from "express";
 import {
   validateRegistrationData,
   checkOtpRestrictions,
+  trackOtpRequests,
 } from "../utils/auth.helper";
 import prisma from "../../../../packages/libs/prisma";
 import { ValidationError } from "../../../../packages/error-handler";
@@ -25,4 +26,5 @@ export const userRegistration = async (
   }
 
   await checkOtpRestrictions(email, next);
+  await trackOtpRequests(email, next);
 };
