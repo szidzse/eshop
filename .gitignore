@@ -47,4 +47,5 @@ error.log
 # Environment Variables
 .env
 
+# Prisma ORM files
 /generated/prisma
