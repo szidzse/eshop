@@ -57,6 +57,7 @@
     "jest": "^30.0.2",
     "jest-environment-node": "^30.0.2",
     "jest-util": "^30.0.2",
+    "jsonc-eslint-parser": "^2.1.0",
     "nx": "22.3.3",
     "prettier": "~3.6.2",
     "prisma": "6.19",
@@ -71,6 +72,7 @@
   "workspaces": [
     "apps/*",
     "libs",
-    "common"
+    "common",
+    "libs/*"
   ]
 }

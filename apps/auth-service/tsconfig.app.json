@@ -18,5 +18,10 @@
     "eslint.config.cjs",
     "eslint.config.mjs"
   ],
-  "files": ["src/swagger-output.json"]
+  "files": ["src/swagger-output.json"],
+  "references": [
+    {
+      "path": "../../libs/shared/tsconfig.lib.json"
+    }
+  ]
 }

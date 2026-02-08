@@ -1,14 +1,16 @@
-import { AppError } from "@eshop/common/error-handler/index";
 import { Request, Response } from "express";
+import { AppError } from "./index.js";
 
 export const errorMiddleware = (err: Error, req: Request, res: Response) => {
   if (err instanceof AppError) {
+    const appError = err as AppError;
+
     console.log(`Error ${req.method} ${req.url} - ${err.message}`);
 
-    return res.status(err.statusCode).json({
+    return res.status(appError.statusCode).json({
       status: "error",
-      message: err.message,
-      ...(err.details && { details: err.details }),
+      message: appError.message,
+      ...(appError.details && { details: appError.details }),
     });
   }
 
