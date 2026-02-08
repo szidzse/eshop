@@ -11,9 +11,6 @@
     },
     {
       "path": "./apps/api-gateway"
-    },
-    {
-      "path": "./libs"
     }
   ]
 }
