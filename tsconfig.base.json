@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@eshop/api-gateway/*": ["apps/api-gateway/src/*"],
+      "@eshop/auth-service/*": ["apps/auth-service/src/*"],
+      "@eshop/common/*": ["libs/common/src/*"]
+    },
     "composite": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
